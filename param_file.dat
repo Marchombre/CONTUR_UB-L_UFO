@@ -12,8 +12,8 @@ mode = CONST
 value =  600.0
 [[mZp]]
 mode = LIN
-start = 0.0
-stop =  5000.0
+start = 10.0
+stop =  5010.0
 number = 10
 [[g1p]]
 mode = LIN
