@@ -1,0 +1,32 @@
+# This is the user template for Herwig running on the DMsimp_s_spin1 UFO model
+# 
+# Only the model specific parts are here. The rest is generated auotmatically
+# by Contur.
+
+# Read in the Feynrules model
+read FRModel.model
+
+# set the values which we dont want to change
+set /Herwig/FRModel/FRModel:xH 0
+set /Herwig/FRModel/FRModel:xPhi 1.0
+
+# templating for the masses we do want to change
+set /Herwig/FRModel/Particles/N1:NominalMass {mN1}*GeV
+set /Herwig/FRModel/Particles/N2:NominalMass {mN2}*GeV
+set /Herwig/FRModel/Particles/N3:NominalMass {mN3}*GeV
+set /Herwig/FRModel/Particles/Zp:NominalMass {mZp}*GeV
+#set /Herwig/FRModel/Particles/Zp~:NominalMass {mZp}*GeV
+set /Herwig/FRModel/FRModel:g1p {g1p}
+
+
+cd /Herwig/NewPhysics
+# set the outgoing particles for the inclusive process
+insert HPConstructor:Outgoing 0 /Herwig/FRModel/Particles/N1
+insert HPConstructor:Outgoing 0 /Herwig/FRModel/Particles/N2
+insert HPConstructor:Outgoing 0 /Herwig/FRModel/Particles/N3
+insert HPConstructor:Outgoing 0 /Herwig/FRModel/Particles/Zp
+#insert HPConstructor:Outgoing 0 /Herwig/FRModel/Particles/Zp~
+
+# set the intermediate particles for the resonant process
+insert ResConstructor:Intermediates 0 /Herwig/FRModel/Particles/Zp
+#insert ResConstructor:Intermediates 0 /Herwig/FRModel/Particles/Zp~
