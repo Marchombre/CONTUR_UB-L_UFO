@@ -1,0 +1,6 @@
+root - INFO - Contur version 2.4.0
+root - INFO - See https://hepcedar.gitlab.io/contur-webpage/
+root - INFO - Generated num of events: 5000
+root - INFO - Contur will prepare jobs for these beams:
+root - INFO - - 13TeV
+root - INFO - No run block in param_file.dat. Will use environment variables

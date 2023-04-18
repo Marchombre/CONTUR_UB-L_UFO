@@ -1,0 +1,23 @@
+#Based off configObj python template
+
+[Parameters]
+[[mN1]]
+mode = CONST
+value = 200.0
+[[mN2]]
+mode = CONST
+value =  400.0
+[[mN3]]
+mode = CONST
+value =  600.0
+[[mZp]]
+mode = LIN
+start = 0.0
+stop =  5000.0
+number = 10
+[[g1p]]
+mode = LIN
+start = 0.0
+stop =  0.7
+number = 10
+
